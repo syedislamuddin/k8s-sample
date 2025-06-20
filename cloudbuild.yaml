@@ -30,7 +30,7 @@ steps:
     git config --global user.email "islamuddinn@yahoo.com"
     git add -A
     git commit -m "[Cloud Builder] Updated image tag europe-west4.pkg.dev/$PROJECT_ID/${_ARTIFACT_REPO}/sample:$SHORT_SHA from commit ${COMMIT_SHA}"
-    git push https://syedislamuddin:$$GIT_ACCESS_TOKEN@github.com/syedislamuddin/gtserver-argocd.git ${_CD_BRANCH}
+    git push --no-thin https://syedislamuddin:$$GIT_ACCESS_TOKEN@github.com/syedislamuddin/gtserver-argocd.git ${_CD_BRANCH}
     
 availableSecrets:
   secretManager:
